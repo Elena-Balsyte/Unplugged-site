@@ -108,11 +108,12 @@ body {
   width: 100%;
 }
 
-div.content-wrapper {
+.content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  width: 90%;
 }
 
 /****************Base - HEADER / FOOTER styles****************/
@@ -125,17 +126,11 @@ footer {
   flex-flow: row wrap;
 }
 
-header.content-wrapper {
+header .content-wrapper {
 display: flex;
 justify-content: center;
 align-items: center;
 flex-flow: row wrap;
-}
-
-footer.content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -151,8 +146,8 @@ header nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-flow: row;
-  align-content: space-between;
+  flex-flow: row wrap;
+
 }
 
 
@@ -164,31 +159,51 @@ header nav ul {
       flex-flow: row wrap;
 }
 
+.hero-area div.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
 /*****************Newsletter area****************/
 
 aside {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-flow: row wrap;
 }
+
+aside .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-flow: row wrap;
+}
+
 
 /*****************Amenities section**************/
 .amenities {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
 }
 
-.amenities-item {
+.amenities .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
 
+.amenities-item {
+  align-self: center;
+}
+
 /******************Reviews section***************/
+.reviews div.content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
 article {
     display: flex;
@@ -211,6 +226,7 @@ footer {
   justify-content: space-around;
   flex-flow: column;
 }
+
 footer .content-wrapper {
   display: flex;
   justify-content: space-around;
@@ -264,7 +280,7 @@ footer .social-icons {
   align-items: center;
 }
 
-div.faq-content {
+.faq-content div {
  display: flex;
  justify-content: center;
  align-items: center;
