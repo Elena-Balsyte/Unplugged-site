@@ -102,10 +102,15 @@ textarea {
 /***********************BASE STYLES************************/
  html {
    width: 100%;
+   font-size: 16px;
  }
 
 body {
   width: 100%;
+  font-size: 1em;
+  color: #e2e3ed;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .content-wrapper {
@@ -113,17 +118,47 @@ body {
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  width: 90%;
+  width: 100%;
 }
 
-/****************Base - HEADER / FOOTER styles****************/
+h1 {
+  font-size: 2.45em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 25px;
+  padding: 25px 16px;
+}
 
-header,
-footer {
+h2 {
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 25px 16px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+p {
+  margin: 0;
+  padding: 10px 16px;
+}
+
+/****************HEADER styles****************/
+
+header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #202322;
+  padding: 15px 0;
 }
 
 header .content-wrapper {
@@ -133,13 +168,26 @@ align-items: center;
 flex-flow: row wrap;
 }
 
+header img {
+  width: 220px;
+  height: 47px;
+}
+
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
+  border-top: 1px solid grey;
+}
 
 header nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-
+  width: 70%;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 header nav ul {
@@ -147,21 +195,38 @@ header nav ul {
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
+  width: 160px;
+  list-style-type: none;
+  padding: 0;
+}
 
+a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  color: #e2e3ed;
+  font-weight: 500;
 }
 
 
 /******************Hero-area styles**************/
 .hero-area {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       flex-flow: row wrap;
+      width: 100%;
+      height: 500px;
+      background-image: url('../img/jake-melara-30679-unsplash.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
-.hero-area div.content-wrapper {
+.hero-area  {
   display: flex;
   align-items: flex-start;
+  width: 100%;
 }
 
 /*****************Newsletter area****************/
@@ -170,6 +235,30 @@ aside {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: #527158;
+    padding: 50px 0;
+}
+
+#text-area {
+  background: #e1e2ea;
+  color:#c3c4cb;
+  font-style: italic;
+  width: 320px;
+  height: 50px;
+  margin: 8px 16px;
+  padding: 0 15px;
+  border: 1px solid lightgrey;
+}
+
+#button {
+  background: #2a423a;
+  color: #e2e3ed;
+  text-align: center;
+  width: 340px;
+  height: 50px;
+  margin: 8px 16px;
+  padding: 0 15px;
+  border: 1px solid lightgrey;
 }
 
 aside .content-wrapper {
@@ -181,10 +270,15 @@ aside .content-wrapper {
 
 
 /*****************Amenities section**************/
-.amenities {
+section.amenities {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../img/rawpixel-800820-unsplash1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
 }
 
 .amenities .content-wrapper {
@@ -194,11 +288,24 @@ aside .content-wrapper {
   flex-flow: row wrap;
 }
 
-.amenities-item {
-  align-self: center;
+.amenities article {
+  text-align: center;
+  width: 65%;
+
 }
 
 /******************Reviews section***************/
+
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    background: #2a423a;
+    padding: 50px 0;
+}
+
 .reviews div.content-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -213,40 +320,46 @@ article {
 }
 
 
-.reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-}
-
 /**********************Footer base styles*********************/
+
+
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   flex-flow: column;
+  background: #202322;
+  padding: 30px 0;
 }
 
-footer .content-wrapper {
+footer div.content-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-flow: row wrap;
+  width: 55%;
   }
 
 footer .social {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       flex-flow: column;
+      padding-top: 30px;
 }
 
-address .contact {
+address.contact {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  font-style: normal;
 }
+
+footer p {
+  text-align: center;
+}
+
 
 footer .social-icons {
   display: flex;
@@ -257,19 +370,24 @@ footer .social-icons {
 
 /*************************ABOUT PAGE STYLES***********************/
 
-.mission, .mission-content {
+.mission div.content-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-flow: row wrap;
+  background: #527158;
+  padding: 50px 0;
 }
 
 .contact-section div.content-wrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-flow: row wrap;
+  background: #2a423a;
+  padding: 50px 0;
 }
+
 
 
 /***************************FAQ page styles**************************/
@@ -278,9 +396,11 @@ footer .social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #527158;
+  padding: 50px 0;
 }
 
-.faq-content div {
+.faq-content {
  display: flex;
  justify-content: center;
  align-items: center;
@@ -291,9 +411,19 @@ footer .social-icons {
 .faq-content article {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   flex-flow: row wrap;
+  padding-bottom: 30px;
 }
 
+
+@media screen and (min-width: 1200px) {
+  .header-divider {
+    flex-grow: 1;
+  }
+}
+
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
