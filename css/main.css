@@ -115,10 +115,11 @@ body {
 
 .content-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: column;
   width: 100%;
+  padding: 50px 0;
 }
 
 h1 {
@@ -146,8 +147,10 @@ h3 {
 }
 
 p {
+  font-size: 0.8em;
   margin: 0;
   padding: 10px 16px;
+  line-height: 1.75em;
 }
 
 /****************HEADER styles****************/
@@ -236,35 +239,34 @@ aside {
     justify-content: space-around;
     align-items: center;
     background: #527158;
-    padding: 50px 0;
 }
 
 #text-area {
   background: #e1e2ea;
   color:#c3c4cb;
   font-style: italic;
-  width: 320px;
+  width: 305px;
   height: 50px;
   margin: 8px 16px;
-  padding: 0 15px;
-  border: 1px solid lightgrey;
+  padding-left: 15px;
+  border: 0;
 }
 
 #button {
   background: #2a423a;
   color: #e2e3ed;
   text-align: center;
-  width: 340px;
+  width: 320px;
   height: 50px;
   margin: 8px 16px;
-  padding: 0 15px;
-  border: 1px solid lightgrey;
+  padding: 0;
+  border: 0;
 }
 
 aside .content-wrapper {
   display: flex;
-  justify-content: space-around;
-  align-content: space-around;
+  justify-content: flex-start;
+  align-content: flex-start;
   flex-flow: row wrap;
 }
 
@@ -278,17 +280,19 @@ section.amenities {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 50px 0;
 }
 
 .amenities .content-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 
 .amenities article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   text-align: center;
   width: 65%;
 
@@ -301,9 +305,8 @@ section.amenities {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
     background: #2a423a;
-    padding: 50px 0;
+
 }
 
 .reviews div.content-wrapper {
@@ -312,14 +315,17 @@ section.amenities {
   align-items: flex-start;
 }
 
-article {
+section.reviews article {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-flow: row wrap;
+    width: 100%;
+  }
+
+section.reviews img {
+  padding: 16px;
 }
-
-
 /**********************Footer base styles*********************/
 
 
@@ -329,23 +335,24 @@ footer {
   align-items: center;
   flex-flow: column;
   background: #202322;
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 footer div.content-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
-  width: 55%;
+  width: 30%;
+  padding: 40px 0;
   }
 
 footer .social {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-flow: column;
-      padding-top: 30px;
+      padding: 0;
 }
 
 address.contact {
@@ -368,41 +375,49 @@ footer .social-icons {
   flex-flow: row;
 }
 
+
 /*************************ABOUT PAGE STYLES***********************/
+section.mission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .mission div.content-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-flow: row wrap;
+  flex-flow: column;
   background: #527158;
-  padding: 50px 0;
 }
 
 .contact-section div.content-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-flow: row wrap;
+  flex-flow: column;
   background: #2a423a;
-  padding: 50px 0;
 }
 
 
 
 /***************************FAQ page styles**************************/
 
-.faq-section {
+.faq-section  {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: #527158;
-  padding: 50px 0;
+
+}
+
+.faq-section div.content-wrapper {
+  align-items: flex-start;
 }
 
 .faq-content {
  display: flex;
- justify-content: center;
+ justify-content: space-between;
  align-items: center;
  flex-flow: row wrap;
 }
@@ -413,17 +428,10 @@ footer .social-icons {
   align-items: flex-start;
   justify-content: flex-start;
   flex-flow: row wrap;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 
-@media screen and (min-width: 1200px) {
-  .header-divider {
-    flex-grow: 1;
-  }
-}
-
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -513,8 +521,151 @@ footer .social-icons {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /* Tablet styles here */
+
+.header-divider {
+  width: 0;
+}
+
+header .content-wrapper {
+  justify-content: space-around;
+}
+
+header nav {
+  width: auto;
+}
+
+aside .content-wrapper {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.form-description, div.form {
+  width: 40%;
+  justify-content: space-between;
+}
+
+input, #text-area {
+  width: 315px;
+}
+#button {
+  width: 330px;
+}
+
+.amenities article {
+  width: 35%;
+  padding: 25px 50px;
+}
+
+.amenities div.content-wrapper {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.reviews div.content-wrapper {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+section.reviews img {
+  padding: 16px 0;
+}
+
+div.reviews-article {
+  width: 49%;
+}
+
+footer div.content-wrapper {
+  justify-content: space-between;
+  width: 70%;
+  padding: 50px 0;
+}
+
+.mission p {
+  width: 40%;
+}
+
+.mission div.content-wrapper {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section div.content-wrapper {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  width: 80%;
+}
+
+.faq-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-section div.content-wrapper {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.faq-content article {
+  width: 45%;
+}
+
+.faq-content h3,
+.faq-content p {
+  padding: 0;
+}
+
+h2 {
+  padding: 0;
+}
+}
+
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop styles here */
+
+header .content-wrapper {
+    justify-content: space-between;
+  }
+aside .content-wrapper {
+  justify-content: space-around;
+}
+
+.amenities article {
+  width: 25%;
+  margin: 25px;
+}
+
+ div.content-wrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+h2 {
+  padding: 0;
+}
 }
 
 @media print,
