@@ -160,6 +160,7 @@ p {
   padding: 10px 16px;
   line-height: 1.75em;
 }
+/**********************MOBILE STYLES**************************/
 
 /****************HEADER styles****************/
 
@@ -297,15 +298,19 @@ section.amenities {
   flex-flow: row wrap;
 }
 
-.amenities article {
+article.amenities-item {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  flex-flow: column;
   text-align: center;
   width: 65%;
-
 }
 
+.amenities i {
+	font-size: 3.75em;
+  margin-bottom: 40px;
+}
 /******************Reviews section***************/
 
 
@@ -380,8 +385,15 @@ footer .social-icons {
   flex-flow: row;
 }
 
+footer i {
+  color: #527158;
+  font-size: 2.625em;
+}
 
-/*************************ABOUT PAGE STYLES***********************/
+/*=======================================================================
+                    ABOUT PAGE STYLES
+========================================================================*/
+
 section.mission {
   display: flex;
   justify-content: center;
@@ -399,7 +411,7 @@ section.mission {
 .map figure {
     width: 100%;
     height: 0;
-    padding-bottom: 80%;
+    padding-bottom: 125%;
     overflow: hidden;
     position: relative;
 }
@@ -588,6 +600,11 @@ input, #text-area {
   padding: 25px 50px;
 }
 
+.amenities i {
+	font-size: 4.6875em;
+  margin-bottom: 40px;
+}
+
 .reviews figure {
   width: 40%;
 }
@@ -616,6 +633,10 @@ footer div.content-wrapper {
   justify-content: space-between;
   align-items: flex-start;
   flex-flow: row wrap;
+}
+
+.map figure {
+    padding-bottom: 45%;
 }
 
 .contact-section {
@@ -682,6 +703,10 @@ aside .content-wrapper {
 
 h2 {
   padding: 0;
+}
+
+.map figure {
+    padding-bottom: 37.5%;
 }
 }
 
